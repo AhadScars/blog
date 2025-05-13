@@ -16,12 +16,7 @@ public class Controller_model {
     service serviceModel;
 
 
-    @GetMapping("/string")
-    public String hello(){
-        return "hello this is permit to all";
-    }
-
-    @DeleteMapping("/delete")
+  @DeleteMapping("/delete")
     public void deleteAll(){
         serviceModel.deleteAll();
     }
@@ -46,6 +41,7 @@ public class Controller_model {
     public Optional<Registration> findbyId(@PathVariable Integer id){
         return serviceModel.findById(id);
     }
+
 
 
 }
